@@ -1,14 +1,5 @@
 
-#### Why Yelb 
 
-Yelb is an app I wrote from scratch (leveraging existing frameworks and tools such as Sinatra, Clarity and others). 
-
-I have built it for a couple of reasons: 
-
-- while there are dozens of demo/test apps out there, I think that having an app that you know 100% end-to-end and that you know inside out is something useful (if nothing, you will learn/experience one or more programming languages) 
-- building a set of assets to deploy a "real" application on multiple platforms (e.g. Docker, Kubernetes, Rancher, CloudFoundry, OpenShift, ECS, Serverless etc etc). Owning the application itself makes this task easier, more useful and more interesting. Also, using target platforms specific examples isn't quite like the challenge of having to think about how to adapt an existing application to be able to deploy it on a specific target platform.   
-
-As far as reason #1 goes, I found very interesting dealing with the challenges (at the edge of dev and ops duties) of starting and coordinating the application modules in specific environments (development, test, production). This is often achieved in specific programming environments leveraging system variables (e.g. RACK_ENV for ruby, other mechanisms for Angular2, etc). You will see some of these configurations in actions in the `localdevelopment` and `localtest` instructions (inside the `deployments` folder). Building an application from scratch and packaging it using Docker while honoring this flexibility is a very interesting (learning) exercise.
 
 #### Yelb architecture
 
