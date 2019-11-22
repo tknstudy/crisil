@@ -27,8 +27,8 @@ RUN npm install
 RUN npm install --save-dev  --unsafe-perm node-sass
 RUN ng build --environment=prod --output-path=./prod/dist/
 
-#RUN ng build --environment=test --output-path=./test/dist/
-#RUN ng build --environment=dev --output-path=./dev/dist/
+RUN ng build --environment=test --output-path=./test/dist/
+RUN ng build --environment=dev --output-path=./dev/dist/
 
 
 FROM nginx:1.11.5
@@ -42,8 +42,8 @@ ENV UI_ENV=prod
 RUN chmod +x startup.sh
 
 COPY --from=0 /clarity-seed/src/prod/dist /clarity-seed/prod/dist
-#COPY --from=0 /clarity-seed/src/test/dist /clarity-seed/test/dist
-#COPY --from=0 /clarity-seed/src/dev/dist /clarity-seed/dev/dist
+COPY --from=0 /clarity-seed/src/test/dist /clarity-seed/test/dist
+COPY --from=0 /clarity-seed/src/dev/dist /clarity-seed/dev/dist
 
 CMD ["./startup.sh"]
 
